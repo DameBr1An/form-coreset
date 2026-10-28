@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible bug in FormCoreset
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not upload copyrighted images. A minimal synthetic reproduction or
+        a description of the image properties is enough.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Exact command, config, and minimal input description.
+      placeholder: |
+        form-coreset dedupe ./images --out ./out
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: v0.1.0a0 or git SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: extras
+    attributes:
+      label: Installed extras
+      multiple: true
+      options:
+        - subject
+        - mask
+        - anime
+        - ui
+        - dev
+        - none
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, Python, CPU/GPU, RAM
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste the relevant traceback or command output.
+      render: shell

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local data / outputs
+data/
+benchmarks/data/
+output/
+organized/
+curated/
+.formcoreset/
+.tmp*/
+models/
+examples/demo_data/
+examples/demo_output/
+*.local.yaml
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Env
+.env
+.env.*

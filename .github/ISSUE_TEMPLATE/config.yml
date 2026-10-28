@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/DameBr1An/form-coreset/tree/main/docs
+    about: Read the architecture, PRD, and same-source dedup logic first.
+  - name: Security report
+    url: https://github.com/DameBr1An/form-coreset/security/advisories/new
+    about: Please report security issues privately.

@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a focused feature or integration
+title: "[feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Keep it scoped; describe inputs, outputs, and failure behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - dedupe / matching
+        - form clustering
+        - mask / segmentation
+        - canonical / stitching
+        - CLI / UI
+        - docs / benchmark
+        - integration (3D, Kohya, ComfyUI, etc.)

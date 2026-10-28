@@ -1,0 +1,51 @@
+name: Model / license addition
+description: Propose a new model, weight, or backend
+title: "[model] "
+labels: ["model", "license", "needs-triage"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model / weight name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Upstream URL
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: Apache-2.0 / MIT / custom / unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: commercial
+    attributes:
+      label: Commercial use
+      options:
+        - allowed
+        - restricted
+        - non-commercial
+        - unknown
+    validations:
+      required: true
+  - type: textarea
+    id: integration
+    attributes:
+      label: Integration point
+      description: MaskProvider / FormEncoder / LocalMatcher / other.
+    validations:
+      required: true
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy
+      options:
+        - label: No restricted weights will be bundled by default
+          required: true
+        - label: I will update THIRD_PARTY_LICENSES.md
+          required: true
